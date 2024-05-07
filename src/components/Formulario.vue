@@ -60,7 +60,7 @@
                 tipo: '',
                 mensaje: ''
             })
-        },10000)
+        },3000)
     }
 
     const editando = computed (() => {
