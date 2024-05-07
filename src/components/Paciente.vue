@@ -25,6 +25,12 @@
             </span>
         </p>
 
+        <p class="font-bold mb-3 text-gray-700 uppercase">Raza:
+            <span class="font-normal normal-case">
+                {{ paciente.raza }}
+            </span>
+        </p>
+
         <p class="font-bold mb-3 text-gray-700 uppercase">Propietario: 
             <span class="font-normal normal-case">
                 {{ paciente.propietario }}

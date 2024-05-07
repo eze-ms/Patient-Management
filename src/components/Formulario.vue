@@ -7,7 +7,7 @@
         mensaje: ''
     })
 
-    const emit = defineEmits(['update:nombre', 'update:propietario', 'update:email','update:alta', 'update:sintomas', 'guardar-paciente'])
+    const emit = defineEmits(['update:nombre', 'update:raza', 'update:propietario', 'update:email','update:alta', 'update:sintomas', 'guardar-paciente'])
 
     const props = defineProps({
 
@@ -19,6 +19,12 @@
             type: String,
             required: true
         },
+
+        raza: {
+            type: String,
+            required: true
+        },
+
         propietario: {
             type: String,
             required: true
@@ -99,6 +105,33 @@
                     @input="$emit('update:nombre', $event.target.value )"
                 />
             </div>
+
+            <div class="mb-5">
+                <label
+                  for="raza"
+                  class="block text-gray-700 uppercase font-bold"
+                  >
+                    Raza
+                </label>
+
+                <select
+                    id="raza"
+                    class="border-2 w-full p-2 mt-2 rounded-md"
+                    :value="raza"
+                    @change="$emit('update:raza', $event.target.value)"
+                >
+                    <option value="">Selecciona la raza</option>
+                    <option value="Perro">Perro</option>
+                    <option value="Gato">Gato</option>
+                    <option value="Conejo">Conejo</option>
+                    <option value="Hámster">Hámster</option>
+                    <option value="Tortuga">Tortuga</option>
+                    <option value="Hurón">Hurón</option>
+                    <option value="Pájaro">Pájaro</option>
+                    <option value="Gallina">Gallina</option>
+                </select>
+            </div>
+
 
             <div class="mb-5">
                 <label for="propietario" class="block text-gray-700 uppercase font-bold">

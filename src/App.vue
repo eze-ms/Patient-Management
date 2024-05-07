@@ -87,6 +87,7 @@
         <div class="mt-12 md:flex">
             <Formulario
                 v-model:nombre="paciente.nombre"
+                v-model:raza="paciente.raza"
                 v-model:propietario="paciente.propietario"
                 v-model:email="paciente.email"
                 v-model:alta="paciente.alta"
