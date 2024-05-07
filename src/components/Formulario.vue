@@ -162,7 +162,7 @@
 
             <input 
                 type="submit"
-                class="bg-indigo-600 w-full p-3 text-white uppercase font-bold text-center hover:bg-indigo-700 cursor-pointer transition-colors"
+                class="bg-blue-500 w-full p-3 text-white uppercase font-bold text-center hover:bg-blue-600 cursor-pointer transition-colors rounded-lg"
                 :value="[editando ? 'Guardar cambios' : 'Registrar Paciente']"
             />
        </form>
