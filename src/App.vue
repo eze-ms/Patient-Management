@@ -12,6 +12,7 @@
     const paciente = reactive({
         id: null,
         nombre: '',
+        raza: '',
         propietario: '',
         email: '',
         alta: '',
@@ -55,6 +56,7 @@
         // Reinicia el objeto paciente después de guardar
         Object.assign(paciente, {
             nombre: '',
+            raza: '',
             propietario: '',
             email: '',
             alta: '',
@@ -96,13 +98,13 @@
                 :id="paciente.id"
             />
             
-            <div class="md:w-1/2 md:h-screen overflow-y-scroll">
-                <h3 class="text-gray-700 font-extrabold text-2xl text-center">Administrar pacientes</h3>
-
+            <div class="md:w-1/2 md:h-screen overflow-y-scroll bg-white shadow-md rounded-lg py-10 px-5 mb-10 mr-5 ml-5">
+                <h3 class="text-gray-700 font-extrabold text-2xl text-center">Manage Patients</h3>
+                
                 <div v-if="pacientes.length > 0">
-                    <p class="text-lg mt-5 text-center mb-10">
-                            Información de 
-                            <span class="text-blue-500 font-bold">pacientes</span>
+                    <p class="text-gray-600 text-lg mt-5 text-center mb-10"> 
+                        <span class="text-blue-500 font-bold">Patient's</span>
+                        Information
                     </p> 
                     <Paciente
                         v-for="paciente in pacientes"
@@ -112,7 +114,7 @@
                         @eliminar-paciente="eliminarPaciente"
                     />
                 </div>
-                <p v-else class="mt-20 text-2xl text-center">No hay pacientes</p>
+                <p v-else class="mt-20 text-2xl text-center">No Patients</p>
             </div>
         </div>
     </div>
